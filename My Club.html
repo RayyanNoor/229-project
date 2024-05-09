@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Join My Club</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  
+    <h1>WELCOME TO RYYAN'S FABULOUS WORLD! </h1>
+    <nav>
+     <a href="Ryyan blog.html">Home</a>
+     <a href="About.html">Who is Ryyan</a>
+     <a href="My family.html"> Loveliest family</a> 
+     <a href="Educational journey.html">Education</a>
+     <a href="Sudan.html">Home Country</a> 
+     <a href="My Club.html">My Club</a>
+     
+    
+     </nav>
+     <br><br>
+     <p>As i mentioned iam obsessed with poetry, i decided to create reading club, my invitation is for all the students as well as the instructors, so if you are interested in arabic poetry you can join my reading club. Fill the below form and based on your contact informations i will contact you and manage the date and place.</p>
+    <h2 align="center">Join My Club</h2>
+    <form id="myForm" onsubmit="return validateForm()">
+        <fieldset>
+            <legend>Name & Nickname</legend>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="nickname">Nickname:</label>
+            <input type="text" id="nickname" name="nickname">
+        </fieldset>
+
+        <label for="birthdate">Birthdate:</label>
+        <input type="date" id="birthdate" name="birthdate" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="@gmail.com" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+            <option value="male">Male</option>
+            <option value="female" selected>Female</option>
+        </select>
+
+        <label for="rating">Rating:</label>
+        <input type="number" id="rating" name="rating" min="1" max="5" >
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <label for="subscription">Subscribe to my blog:</label>
+        <input type="checkbox" id="subscription" name="subscription">
+
+        <label for="upload">Upload Photo:</label>
+        <input type="file" id="upload" name="upload" accept="image/*">
+
+        <label for="color">Favorite Color:</label>
+        <input type="color" id="color" name="color">
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <script language="javascript">
+      function validateForm() {
+          var name = document.getElementById("name").value;
+          var email = document.getElementById("email").value;
+
+          // Validate name field (at least 3 characters)
+          if (name.length < 3) {
+              showError("name", "Name must be at least 3 characters");
+              return false;
+          }
+
+          // Validate email field (must contain "@gmail.com")
+          if (!email.includes("@gmail.com")) {
+              showError("email", "Please enter a valid Gmail address");
+              return false;
+          }
+
+          // Form is valid, proceed with submission
+          return true;
+      }
+
+      function showError(field, message) {
+          var errorElement = document.createElement("span");
+          errorElement.className = "error";
+          errorElement.textContent = message;
+
+          var inputField = document.getElementById(field);
+          var parentField = inputField.parentNode;
+
+          parentField.appendChild(errorElement);
+      }
+  </script>
+   <footer>
+
+    <div >contact me at:<a href="https://twitter.com/Ryyan_noor?t=6p37eqaqrxUo9NXR5bWTvw&s=09" target="_blank"><img src="twitter.png" alt="Twitter" style="height: 25px; width: 25px;" align="right" ></a><br>
+        <a href="mailto:21903240@emu.edu.tr" target="_blank"><img src="outlook.png" alt="outlook" style="height: 30px; width: 30px;" align="right" ></a></div>
+        <p>&reg; RyyanNoor</p>
+      </footer>
+</body>
+
+</html>
